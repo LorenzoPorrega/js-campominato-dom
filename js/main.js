@@ -12,9 +12,11 @@ playButton.addEventListener("click", function(){
     let blockContainer = container;
     blockContainer.classList.replace("d-none", "d-flex");
 
-    for (i = 1; i = difficulty; i++){
+    for (i = 1; i == difficulty; i++){
         let block = document.createElement("div");
-        block.classList.add("block");
+        block.classList.add(".block");
+        block.style.flexBasis = `calc(100% / ${Math.sqrt(difficulty)})`;
+        blockContainer.append(block);
     }
 
     
